@@ -1,0 +1,13 @@
+version: 1.0.{build}
+
+image: macos
+
+branches:
+  only:
+    - master
+
+build_script:
+  - sudo rm -rf /Library/Developer/CommandLineTools
+  - xcode-select --install
+  - xcodebuild -version
+  - swift -version
